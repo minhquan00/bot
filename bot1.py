@@ -61,7 +61,7 @@ def run_proxy_loop():
         print("[BOT] Auto-running proxy.py ...")
         # Chạy proxy nhưng không in log/banner ra terminal
         subprocess.Popen(
-            ["python3", "proxy.py"],
+            ["python3", "1.py"],
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL
         )
@@ -79,4 +79,5 @@ if __name__ == "__main__":
     # Giữ main thread sống
     t1.join()
     t2.join()
+
     
