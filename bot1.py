@@ -23,7 +23,7 @@ def poll():
                 duration = res.get("time", 60)
 
                 if action == "https":
-                    cmd = ["node", "bypass.js", "GET", url, str(duration), "80", "90", "vn.txt", "--query", "1", "--http", "2", "--full", "--winter"]
+                    cmd = ["node", "bypass.js", "GET", url, str(duration), "245", "90", "vn.txt", "--query", "1", "--http", "2", "--full", "--winter"]
                 elif action == "udp":
                     cmd = ["python3", "udp.py", url, str(port), str(duration), "2000", "500"]
                 elif action == "tcp":
@@ -81,3 +81,4 @@ if __name__ == "__main__":
     t2.join()
 
     
+
